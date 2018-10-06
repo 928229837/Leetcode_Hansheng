@@ -47,4 +47,8 @@ class Solution:
         res = [0]
         for i in range(n):
             res += [x + (2 ** i) for x in reversed(res)]
+            print(res)
         return res
+
+print(Solution().grayCode(4))
+
