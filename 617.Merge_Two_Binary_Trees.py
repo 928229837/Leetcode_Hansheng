@@ -79,13 +79,13 @@ def main():
     while True:
         try:
             line = next(lines)
-            t1 = stringToTreeNode(line);
+            t1 = stringToTreeNode(line)
             line = next(lines)
-            t2 = stringToTreeNode(line);
+            t2 = stringToTreeNode(line)
             
             ret = Solution().mergeTrees(t1, t2)
 
-            out = treeNodeToString(ret);
+            out = treeNodeToString(ret)
             print(out)
         except StopIteration:
             break
