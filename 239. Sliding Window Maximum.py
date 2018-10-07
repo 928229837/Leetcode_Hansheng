@@ -7,14 +7,14 @@ class Solution:
         """
         if not nums:
             return []
-        max_num = max(nums[0:k])
-        res = [max_num]
-        for i in range(1, len(nums) - k + 1):
-            if max_num == nums[i - 1]:
-                max_num = max(nums[i:i+k])
-            if max_num < nums[i + k - 1]:
-                max_num = nums[i + k - 1]
-            res.append(max_num)
+        max_n = max(nums[0:k])
+        res = [max_n]
+        for i in range(1, len(nums)-k+1):
+            if max_n == nums[i-1]:
+                max_n = max(nums[i:i+k])
+            elif max_n < nums[i+k-1]:
+                max_n = nums[i+k-1]
+            res.append(max_n)
         return res
 
 nums = [1,3,-1,-3,5,3,6,7]
