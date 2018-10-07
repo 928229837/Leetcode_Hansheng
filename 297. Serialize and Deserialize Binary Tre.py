@@ -51,4 +51,6 @@ class Codec:
 
 a = "1 2 # # 3 4 # # 5 # #"
 
-Codec().deserialize(a)
+asd = Codec().deserialize(a)
+
+print(Codec().serialize(asd))
