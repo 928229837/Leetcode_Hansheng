@@ -13,12 +13,16 @@ class Solution:
         :type q: TreeNode
         :rtype: TreeNode
         """
-        if root in (None, p, q): return root
+        if root in (None, q, p): return root
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        if left:
-            if right: return root
-            else: return left
+        if right:
+            if left:
+                return root
+            else:
+                return right
         else:
-            if right: return right
-            else: return None
+            if left:
+                return left
+            else:
+                return None
