@@ -20,11 +20,11 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        dic = {}
-        for i in strs:
-            word = ''.join(sorted(i))
-            if word in dic:
-                dic[word].append(i)
-            else:
-                dic[word] = [i]
-        return dic.values()
+        dic={}
+        for s in strs:
+            y="".join(sorted(s))
+            if y in dic:
+                dic[y].append(s)
+            else:dic[y]=[s]
+        res=[dic[y] for y in dic]
+        return res

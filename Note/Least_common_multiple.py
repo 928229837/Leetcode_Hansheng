@@ -23,8 +23,10 @@ def faster(a, b):
 
 GCD = lambda a, b: (GCD(b, a % b) if a % b else b)
 
-a, b = 9, 67
-print(faster(a, b))
+# a, b = 9, 67
+a, b= 2, 3
+print(a, b, GCD(a,b))
+print(a, b, faster(a, b))
 print((a*b)//GCD(a, b))
 
 # num1 = 9

@@ -1,2 +1,3 @@
-a = list(range(10))
-print(a)
+
+
+print(5%45)
