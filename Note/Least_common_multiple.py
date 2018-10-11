@@ -1,4 +1,4 @@
-def lcm(x, y):
+def lcm_brute_force(x, y):
     #  获取最大的数
     if x > y:
         greater = x
@@ -14,7 +14,19 @@ def lcm(x, y):
     return lcm
 
 
-num1 = 9
-num2 = 67
+def faster(a, b):
+    product = a*b
+    while b:
+        a, b = b, a % b
+    return product//a  # a is gcd
 
-print(num1, "and", num2, "least common multi is:", lcm(num1, num2))
+
+GCD = lambda a, b: (GCD(b, a % b) if a % b else b)
+
+a, b = 9, 67
+print(faster(a, b))
+print((a*b)//GCD(a, b))
+
+# num1 = 9
+# num2 = 67
+# print(num1, "and", num2, "least common multi is:", lcm_brute_force(num1, num2))
